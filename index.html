@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta+ | Conectamos tu negocio con el mundo</title>
+    <meta name="description" content="Descubre, pide y conéctate en un clic con los negocios que ya hacen parte de Conecta+.">
+
+    <!-- Etiqueta Oficial de Google (Analytics / Tag Manager) - Conecta+ -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5Q7P7QFF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    </script>
+
+    <!-- Seguridad y Vista Previa al Compartir (Open Graph) -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Conecta+">
+    <meta property="og:title" content="Conecta+ | Pide directo a tus negocios favoritos">
+    <meta property="og:description" content="Domicilios y pedidos directos sin intermediarios en Puerto Berrío y la región.">
+    <meta property="og:url" content="https://soyconectaplus.com">
+
+    <!-- Configuración PWA para instalar Conecta+ como App en el celular -->
+    <meta name="theme-color" content="#040D21">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Conecta+">
+    <link rel="manifest" id="pwaManifestLink">
+    <script>
+        (function () {
+            const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="#040D21"/><path d="M84 37C77.5 30 68.5 26 58.5 26C39.5 26 25 41 25 60C25 79 39.5 94 58.5 94C68.5 94 77.5 90 84 83L73 72C69.2 76.2 64.2 78.5 58.5 78.5C48 78.5 40.5 70.5 40.5 60C40.5 49.5 48 41.5 58.5 41.5C64.2 41.5 69.2 43.8 73 48L84 37Z" fill="#0052FF"/><path d="M87 43H97V55H109V65H97V77H87V65H75V55H87V43Z" fill="#00D65B"/></svg>`;
+            const iconDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(iconSvg);
+            const manifestObj = {
+                name: 'Conecta+ | Tu Comercio Conectado',
+                short_name: 'Conecta+',
+                description: 'Pide domicilios y conéctate en un clic con los negocios de tu ciudad.',
+                start_url: '.',
+                display: 'standalone',
+                background_color: '#040D21',
+                theme_color: '#040D21',
+                icons: [
+                    { src: iconDataUrl, sizes: '192x192', type: 'image/svg+xml', purpose: 'any maskable' },
+                    { src: iconDataUrl, sizes: '512x512', type: 'image/svg+xml', purpose: 'any maskable' }
+                ]
+            };
+            const manifestEl = document.getElementById('pwaManifestLink');
+            if (manifestEl) {
+                manifestEl.setAttribute('href', 'data:application/manifest+json;charset=utf-8,' + encodeURIComponent(JSON.stringify(manifestObj)));
+            }
+        })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .app-launcher-tile {
+            transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .app-launcher-tile:hover {
+            transform: translateY(-4px);
+        }
+        .app-launcher-tile:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FB] text-[#040D21] min-h-screen flex flex-col overflow-x-hidden antialiased selection:bg-[#00D65B] selection:text-[#040D21]">
+
+    <!-- Parte Superior con Mosaico Gastronómico en Marca de Agua e Identidad Conecta+ -->
+    <header class="bg-gradient-to-br from-[#071D49] via-[#0B2C6B] to-[#06183D] text-white border-b border-white/15 relative overflow-hidden">
+        <!-- Mosaico de 4 fotos reales visibles en marca de agua -->
+        <div class="pointer-events-none absolute inset-0 grid grid-cols-2 sm:grid-cols-4 gap-0" aria-hidden="true">
+            <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                onerror="this.style.display='none'"
+                class="w-full h-full object-cover opacity-35"
+            >
+            <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                onerror="this.style.display='none'"
+                class="w-full h-full object-cover opacity-35"
+            >
+            <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                onerror="this.style.display='none'"
+                class="w-full h-full object-cover opacity-35 hidden sm:block"
+            >
+            <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+                alt=""
+                onerror="this.style.display='none'"
+                class="w-full h-full object-cover opacity-35 hidden sm:block"
+            >
+        </div>
+        <!-- Velo azul de marca con degradado suave para conservar nitidez sin tapar las fotos -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#040D21]/70 via-[#071D49]/65 to-[#040D21]/85" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#0052FF]/25 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[#00D65B]/20 blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-5 pb-8 sm:pt-7 sm:pb-10 relative z-10">
+            <!-- Barra de navegación adaptada a móvil (sin desbordes horizontales) -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 pb-5 border-b border-white/15">
+                <a href="#" class="flex items-center gap-3 group min-w-0">
+                    <svg class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 drop-shadow-md transition-transform group-hover:scale-105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="conectaGradTop" x1="35" y1="20" x2="75" y2="100" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#0052FF"/>
+                                <stop offset="55%" stop-color="#0095D9"/>
+                                <stop offset="100%" stop-color="#00D65B"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="60" cy="60" r="58" fill="#040D21" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                        <rect x="20" y="24" width="6" height="6" rx="1" fill="#0052FF"/>
+                        <rect x="31" y="22" width="7" height="7" rx="1" fill="#0052FF"/>
+                        <rect x="26" y="34" width="7" height="7" rx="1" fill="#0052FF"/>
+                        <rect x="19" y="42" width="6" height="6" rx="1" fill="#0052FF"/>
+                        <rect x="29" y="46" width="7" height="7" rx="1" fill="#0052FF"/>
+                        <rect x="21" y="55" width="7" height="7" rx="1" fill="#0052FF"/>
+                        <rect x="30" y="64" width="6" height="6" rx="1" fill="#0066FF"/>
+                        <path d="M84 37C77.5 30 68.5 26 58.5 26C39.5 26 25 41 25 60C25 79 39.5 94 58.5 94C68.5 94 77.5 90 84 83L73 72C69.2 76.2 64.2 78.5 58.5 78.5C48 78.5 40.5 70.5 40.5 60C40.5 49.5 48 41.5 58.5 41.5C64.2 41.5 69.2 43.8 73 48L84 37Z" fill="url(#conectaGradTop)"/>
+                        <path d="M87 43H97V55H109V65H97V77H87V65H75V55H87V43Z" fill="#00D65B"/>
+                    </svg>
+                    <div class="min-w-0">
+                        <div class="flex items-center text-xl font-black tracking-tight leading-none drop-shadow">
+                            <span class="text-white">Conecta</span><span class="text-[#00D65B] ml-0.5">+</span>
+                        </div>
+                        <span class="block text-[10px] font-semibold tracking-[0.14em] sm:tracking-[0.18em] text-slate-200 uppercase mt-1 truncate">
+                            Conectamos tu negocio con el mundo
+                        </span>
+                    </div>
+                </a>
+
+                <div class="grid grid-cols-3 sm:flex items-center gap-2 w-full sm:w-auto">
+                    <button
+                        type="button"
+                        id="installAppBtn"
+                        class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-[#0052FF]/30 hover:bg-[#0052FF]/45 text-white font-bold text-[11px] sm:text-xs border border-[#3B82F6]/40 transition cursor-pointer inline-flex items-center justify-center gap-1"
+                        title="Instalar Conecta+ en tu celular"
+                    >
+                        <svg class="w-3.5 h-3.5 text-[#00D65B] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/>
+                        </svg>
+                        <span class="truncate">Instalar</span>
+                    </button>
+                    <button
+                        type="button"
+                        id="sharePortalBtn"
+                        class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-[11px] sm:text-xs border border-white/15 transition cursor-pointer inline-flex items-center justify-center"
+                    >
+                        <span class="truncate">Compartir</span>
+                    </button>
+                    <a
+                        href="#productos-estrella"
+                        class="px-2.5 sm:px-4 py-2 rounded-xl bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] font-extrabold text-[11px] sm:text-xs shadow-md shadow-[#00D65B]/20 transition inline-flex items-center justify-center text-center"
+                    >
+                        <span class="truncate">Mi negocio</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloque Central para Ciudadanos + Buscador Integrado -->
+            <div class="pt-6 text-center max-w-2xl mx-auto space-y-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#040D21]/60 border border-[#00D65B]/40 text-[#00D65B] text-[11px] font-bold tracking-wide">
+                    Domicilios y pedidos directos · Todo en un clic
+                </span>
+                <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight drop-shadow">
+                    Pide directo a tus negocios favoritos
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-100 leading-relaxed max-w-lg mx-auto">
+                    Ingresa directo a los negocios aliados, explora sus menús y catálogos y pide tus domicilios sin intermediarios.
+                </p>
+
+                <!-- Buscador Protagonista dentro de la cabecera -->
+                <div class="pt-2 max-w-xl mx-auto space-y-2.5">
+                    <div class="relative">
+                        <label for="quickSearch" class="sr-only">Buscar negocio, comida o producto</label>
+                        <input
+                            id="quickSearch"
+                            type="text"
+                            placeholder="¿Qué se te antoja hoy? Ej: comidas rápidas, parrilla, helados, granja..."
+                            class="w-full px-4 py-3.5 pl-11 rounded-2xl bg-white text-[#040D21] placeholder-slate-400 border-2 border-transparent focus:border-[#00D65B] focus:outline-none text-xs sm:text-sm shadow-xl transition"
+                        >
+                        <svg class="w-4 h-4 text-[#0052FF] absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                        <button
+                            type="button"
+                            id="clearSearchBtn"
+                            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-[#040D21] px-2 py-1 rounded-lg cursor-pointer"
+                        >
+                            Limpiar
+                        </button>
+                    </div>
+
+                    <!-- Atajos rápidos clicables -->
+                    <div class="flex flex-wrap items-center justify-center gap-1.5 text-[11px]">
+                        <button type="button" data-quick="comidas rapidas" class="quick-tag px-3 py-1 rounded-full bg-[#040D21]/55 hover:bg-[#00D65B] text-white hover:text-[#040D21] border border-white/20 font-semibold transition cursor-pointer">
+                            🍔 Comidas rápidas
+                        </button>
+                        <button type="button" data-quick="parrilla" class="quick-tag px-3 py-1 rounded-full bg-[#040D21]/55 hover:bg-[#00D65B] text-white hover:text-[#040D21] border border-white/20 font-semibold transition cursor-pointer">
+                            🥩 Parrilla &amp; Pizzas
+                        </button>
+                        <button type="button" data-quick="helados" class="quick-tag px-3 py-1 rounded-full bg-[#040D21]/55 hover:bg-[#00D65B] text-white hover:text-[#040D21] border border-white/20 font-semibold transition cursor-pointer">
+                            🍨 Helados &amp; Gomitas
+                        </button>
+                        <button type="button" data-quick="granja" class="quick-tag px-3 py-1 rounded-full bg-[#040D21]/55 hover:bg-[#00D65B] text-white hover:text-[#040D21] border border-white/20 font-semibold transition cursor-pointer">
+                            🌱 Granja &amp; Campo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 pt-6 pb-12 space-y-10">
+
+        <!-- BLOQUE 1: VITRINA PARA CIUDADANOS -->
+        <section aria-label="Negocios conectados para ciudadanos" class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-2 overflow-x-auto pb-1" role="group" aria-label="Filtrar por categoría">
+                    <button
+                        type="button"
+                        data-cat="all"
+                        class="cat-pill px-4 py-2 rounded-full text-xs font-bold bg-[#040D21] text-[#00D65B] shadow-sm whitespace-nowrap transition cursor-pointer"
+                    >
+                        Todas las marcas
+                    </button>
+                    <button
+                        type="button"
+                        data-cat="comida"
+                        class="cat-pill px-4 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 whitespace-nowrap transition cursor-pointer"
+                    >
+                        Gastronomía
+                    </button>
+                    <button
+                        type="button"
+                        data-cat="dulces"
+                        class="cat-pill px-4 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 whitespace-nowrap transition cursor-pointer"
+                    >
+                        Helados &amp; Dulces
+                    </button>
+                    <button
+                        type="button"
+                        data-cat="campo"
+                        class="cat-pill px-4 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 whitespace-nowrap transition cursor-pointer"
+                    >
+                        Campo &amp; Naturaleza
+                    </button>
+                </div>
+
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#040D21] bg-white border border-slate-200 px-3.5 py-1.5 rounded-full self-start sm:self-auto shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-[#00D65B]"></span>
+                    <span id="appsCounter">4 negocios conectados</span>
+                </span>
+            </div>
+
+            <!-- Cuadrícula Tipo Pantalla de Inicio (4 negocios únicos) -->
+            <div id="launcherGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4">
+
+                <!-- App 1: Coyote Express -->
+                <div
+                    data-category="comida"
+                    data-business="Coyote Express"
+                    data-keywords="coyote express comidas rapidas asados salchipapas hamburguesas perros"
+                    class="launcher-item app-launcher-tile bg-white rounded-3xl border border-slate-200 hover:border-[#0052FF] p-4 shadow-sm hover:shadow-md flex flex-col items-center text-center justify-between"
+                >
+                    <a
+                        href="https://conectabp.github.io/CoyoteExpress/?utm_source=conectaplus&utm_medium=portal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-track-biz="Coyote Express"
+                        data-track-action="Entrar App"
+                        class="w-full flex flex-col items-center group"
+                    >
+                        <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] bg-[#040D21] p-1 shadow-md border-2 border-slate-200 group-hover:border-[#0052FF] overflow-hidden mb-3 transition-colors">
+                            <img
+                                src="https://i.postimg.cc/5yJ3VRg6/Whats-App-Image-2026-11-18-at-7-28-19-PM.jpg"
+                                alt="Coyote Express"
+                                onerror="this.src='https://placehold.co/96x96/040D21/00D65B?text=CE'"
+                                class="w-full h-full object-cover rounded-[1.15rem]"
+                            >
+                        </div>
+                        <h2 class="text-sm font-extrabold text-[#040D21] group-hover:text-[#0052FF] leading-tight transition-colors">
+                            Coyote Express
+                        </h2>
+                        <span class="mt-1 inline-block text-[11px] font-semibold text-slate-500">
+                            Comidas &amp; Asados
+                        </span>
+                    </a>
+
+                    <div class="w-full grid grid-cols-2 gap-1.5 mt-3.5 pt-3 border-t border-slate-100">
+                        <a
+                            href="https://conectabp.github.io/CoyoteExpress/?utm_source=conectaplus&utm_medium=portal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Coyote Express"
+                            data-track-action="Entrar App"
+                            class="py-1.5 px-2 rounded-xl bg-[#040D21] hover:bg-[#0052FF] text-white font-bold text-[11px] text-center transition"
+                        >
+                            Entrar
+                        </a>
+                        <a
+                            href="https://wa.me/573168324287?text=%C2%A1Hola%20Coyote%20Express!%20Quisiera%20hacer%20un%20pedido."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Coyote Express"
+                            data-track-action="Pedir WhatsApp"
+                            class="py-1.5 px-2 rounded-xl bg-slate-100 hover:bg-[#00D65B] text-[#040D21] font-bold text-[11px] text-center transition"
+                        >
+                            Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App 2: Restaurante El Portal -->
+                <div
+                    data-category="comida"
+                    data-business="El Portal"
+                    data-keywords="restaurante el portal parrilla cortes pizzas desayunos puerto berrio"
+                    class="launcher-item app-launcher-tile bg-white rounded-3xl border border-slate-200 hover:border-[#0052FF] p-4 shadow-sm hover:shadow-md flex flex-col items-center text-center justify-between"
+                >
+                    <a
+                        href="https://soyconectaplus.com/elportalpuertoberrio/?utm_source=conectaplus&utm_medium=portal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-track-biz="El Portal"
+                        data-track-action="Entrar App"
+                        class="w-full flex flex-col items-center group"
+                    >
+                        <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] bg-[#040D21] p-2 shadow-md border-2 border-slate-200 group-hover:border-[#0052FF] overflow-hidden mb-3 flex items-center justify-center transition-colors">
+                            <img
+                                src="https://i.postimg.cc/bN7gPqK5/Whats-App-Image-2026-11-04-at-9-13-31-PM-(1).jpg"
+                                alt="Restaurante El Portal"
+                                onerror="this.src='https://placehold.co/96x96/040D21/00D65B?text=EP'"
+                                class="w-full h-full object-contain rounded-xl"
+                            >
+                        </div>
+                        <h2 class="text-sm font-extrabold text-[#040D21] group-hover:text-[#0052FF] leading-tight transition-colors">
+                            El Portal
+                        </h2>
+                        <span class="mt-1 inline-block text-[11px] font-semibold text-slate-500">
+                            Parrilla &amp; Pizzas
+                        </span>
+                    </a>
+
+                    <div class="w-full grid grid-cols-2 gap-1.5 mt-3.5 pt-3 border-t border-slate-100">
+                        <a
+                            href="https://soyconectaplus.com/elportalpuertoberrio/?utm_source=conectaplus&utm_medium=portal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="El Portal"
+                            data-track-action="Entrar App"
+                            class="py-1.5 px-2 rounded-xl bg-[#040D21] hover:bg-[#0052FF] text-white font-bold text-[11px] text-center transition"
+                        >
+                            Entrar
+                        </a>
+                        <a
+                            href="https://wa.me/573217780311?text=%C2%A1Hola!%20Quisiera%20hacer%20un%20pedido%20en%20El%20Portal."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="El Portal"
+                            data-track-action="Pedir WhatsApp"
+                            class="py-1.5 px-2 rounded-xl bg-slate-100 hover:bg-[#00D65B] text-[#040D21] font-bold text-[11px] text-center transition"
+                        >
+                            Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App 3: Que hable el azúcar -->
+                <div
+                    data-category="dulces"
+                    data-business="Que hable el azucar"
+                    data-keywords="que hable el azucar emilatto mundo qhea helados gomitas dulces postres"
+                    class="launcher-item app-launcher-tile bg-white rounded-3xl border border-slate-200 hover:border-[#0052FF] p-4 shadow-sm hover:shadow-md flex flex-col items-center text-center justify-between"
+                >
+                    <a
+                        href="https://soyconectaplus.com/emilatto-mundoqhea/?utm_source=conectaplus&utm_medium=portal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-track-biz="Que hable el azucar"
+                        data-track-action="Entrar App"
+                        class="w-full flex flex-col items-center group"
+                    >
+                        <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] bg-slate-50 p-2 shadow-md border-2 border-slate-200 group-hover:border-[#0052FF] overflow-hidden mb-3 flex items-center justify-center transition-colors">
+                            <img
+                                src="https://i.postimg.cc/mrDzpszg/Logos-Emilatto-y-Mundo-QHFA.png"
+                                alt="Que hable el azúcar"
+                                onerror="this.src='https://placehold.co/96x96/F4F7FB/0052FF?text=QA'"
+                                class="w-full h-full object-contain rounded-xl"
+                            >
+                        </div>
+                        <h2 class="text-sm font-extrabold text-[#040D21] group-hover:text-[#0052FF] leading-tight transition-colors">
+                            Que hable el azúcar
+                        </h2>
+                        <span class="mt-1 inline-block text-[11px] font-semibold text-slate-500">
+                            Helados &amp; Gomitas
+                        </span>
+                    </a>
+
+                    <div class="w-full grid grid-cols-2 gap-1.5 mt-3.5 pt-3 border-t border-slate-100">
+                        <a
+                            href="https://soyconectaplus.com/emilatto-mundoqhea/?utm_source=conectaplus&utm_medium=portal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Que hable el azucar"
+                            data-track-action="Entrar App"
+                            class="py-1.5 px-2 rounded-xl bg-[#040D21] hover:bg-[#0052FF] text-white font-bold text-[11px] text-center transition"
+                        >
+                            Entrar
+                        </a>
+                        <a
+                            href="https://wa.me/573104362211?text=%C2%A1Hola!%20Quisiera%20hacer%20un%20pedido."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Que hable el azucar"
+                            data-track-action="Pedir WhatsApp"
+                            class="py-1.5 px-2 rounded-xl bg-slate-100 hover:bg-[#00D65B] text-[#040D21] font-bold text-[11px] text-center transition"
+                        >
+                            Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- App 4: Granja El Potrerillo -->
+                <div
+                    data-category="campo"
+                    data-business="Granja El Potrerillo"
+                    data-keywords="granja el potrerillo campo naturaleza productos campesinos finca"
+                    class="launcher-item app-launcher-tile bg-white rounded-3xl border border-slate-200 hover:border-[#0052FF] p-4 shadow-sm hover:shadow-md flex flex-col items-center text-center justify-between"
+                >
+                    <a
+                        href="https://soyconectaplus.com/granja/?utm_source=conectaplus&utm_medium=portal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-track-biz="Granja El Potrerillo"
+                        data-track-action="Entrar App"
+                        class="w-full flex flex-col items-center group"
+                    >
+                        <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-[1.5rem] bg-[#E8ECEF] shadow-md border-2 border-emerald-200 group-hover:border-[#00D65B] overflow-hidden mb-3 transition-colors">
+                            <img
+                                src="https://i.postimg.cc/GmGcLw9X/Whats-App-Image-2026-07-30-at-1-35-40-AM.jpg"
+                                alt="Logo Granja El Potrerillo"
+                                onerror="this.src='https://placehold.co/96x96/ECFDF5/047857?text=GP'"
+                                class="w-full h-full object-cover scale-110"
+                            >
+                        </div>
+                        <h2 class="text-sm font-extrabold text-[#040D21] group-hover:text-[#0052FF] leading-tight transition-colors">
+                            Granja El Potrerillo
+                        </h2>
+                        <span class="mt-1 inline-block text-[11px] font-semibold text-slate-500">
+                            Hecho con alma campesina
+                        </span>
+                    </a>
+
+                    <div class="w-full grid grid-cols-2 gap-1.5 mt-3.5 pt-3 border-t border-slate-100">
+                        <a
+                            href="https://soyconectaplus.com/granja/?utm_source=conectaplus&utm_medium=portal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Granja El Potrerillo"
+                            data-track-action="Entrar App"
+                            class="py-1.5 px-2 rounded-xl bg-[#040D21] hover:bg-[#0052FF] text-white font-bold text-[11px] text-center transition"
+                        >
+                            Entrar
+                        </a>
+                        <a
+                            href="https://wa.me/573125749480?text=%C2%A1Hola!%20Quisiera%20conocer%20los%20productos%20de%20Granja%20El%20Potrerillo."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-biz="Granja El Potrerillo"
+                            data-track-action="Pedir WhatsApp"
+                            class="py-1.5 px-2 rounded-xl bg-slate-100 hover:bg-[#00D65B] text-[#040D21] font-bold text-[11px] text-center transition"
+                        >
+                            Pedir
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Estado vacío cuando la búsqueda no encuentra coincidencias -->
+            <div id="noResults" class="hidden bg-white rounded-3xl border border-slate-200 p-8 text-center space-y-2 mt-4">
+                <p class="text-sm font-bold text-[#040D21]">No encontramos negocios con ese filtro</p>
+                <p class="text-xs text-slate-500">Prueba con otra palabra o toca "Todas las marcas".</p>
+            </div>
+        </section>
+
+        <!-- SLIDER DINÁMICO DE VENTAJAS CONECTA+ (10 SEGUNDOS POR DIAPOSITIVA) -->
+        <section aria-label="Ventajas de usar y pertenecer a Conecta+" class="relative">
+            <div id="promoSliderCard" class="bg-gradient-to-r from-[#040D21] via-[#091F4A] to-[#040D21] text-white rounded-3xl border border-[#0052FF]/35 p-5 sm:p-6 shadow-lg relative overflow-hidden">
+                <div class="pointer-events-none absolute -right-12 -top-12 w-48 h-48 rounded-full bg-[#00D65B]/15 blur-2xl"></div>
+                <div class="pointer-events-none absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-[#0052FF]/20 blur-2xl"></div>
+
+                <div class="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5 max-w-2xl">
+                        <div class="flex items-center gap-2">
+                            <span id="slideBadge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00D65B]/15 border border-[#00D65B]/35 text-[#00D65B] text-[10px] font-extrabold uppercase tracking-wider">
+                                Para la Comunidad
+                            </span>
+                            <span id="slideStep" class="text-[11px] font-bold text-slate-400">01 / 04</span>
+                        </div>
+                        <h3 id="slideTitle" class="text-base sm:text-lg font-black text-white leading-snug">
+                            Pide directo al negocio, sin sobreprecios ni intermediarios
+                        </h3>
+                        <p id="slideDesc" class="text-xs text-slate-300 leading-relaxed">
+                            Explora las cartas digitales oficiales y envía tu pedido armado directo al WhatsApp de cada marca en segundos.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between sm:justify-end gap-2.5 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10">
+                        <a
+                            id="slideCta"
+                            href="#launcherGrid"
+                            class="px-3.5 sm:px-4 py-2.5 rounded-xl bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] font-extrabold text-xs shadow-md shadow-[#00D65B]/20 transition"
+                        >
+                            Explorar negocios →
+                        </a>
+
+                        <div class="flex items-center gap-1.5">
+                            <button
+                                type="button"
+                                id="prevSlideBtn"
+                                aria-label="Ventaja anterior"
+                                class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xs font-bold border border-white/10 transition cursor-pointer"
+                            >
+                                ‹
+                            </button>
+                            <button
+                                type="button"
+                                id="nextSlideBtn"
+                                aria-label="Siguiente ventaja"
+                                class="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xs font-bold border border-white/10 transition cursor-pointer"
+                            >
+                                ›
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicadores inferiores -->
+                <div class="relative z-10 flex items-center gap-1.5 mt-4 pt-3 border-t border-white/10">
+                    <button type="button" data-slide="0" aria-label="Ir a ventaja 1" class="slide-dot h-1.5 w-7 rounded-full bg-[#00D65B] transition-all cursor-pointer"></button>
+                    <button type="button" data-slide="1" aria-label="Ir a ventaja 2" class="slide-dot h-1.5 w-2.5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer"></button>
+                    <button type="button" data-slide="2" aria-label="Ir a ventaja 3" class="slide-dot h-1.5 w-2.5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer"></button>
+                    <button type="button" data-slide="3" aria-label="Ir a ventaja 4" class="slide-dot h-1.5 w-2.5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador Editorial hacia los Dos Productos Estrella de Conecta+ -->
+        <div id="productos-estrella" class="pt-2 flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-t border-slate-200/80">
+            <div>
+                <span class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0052FF]">
+                    Soluciones para Comerciantes y Empresas
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-[#040D21] mt-1">
+                    Nuestros Dos Productos Estrella
+                </h2>
+            </div>
+            <p class="text-xs text-slate-500">
+                Tecnología creada por <strong class="text-[#040D21]">Conecta+</strong> para vender más y administrar mejor.
+            </p>
+        </div>
+
+        <!-- PRODUCTO ESTRELLA 1: SITIOS WEB INTELIGENTES + TARJETA INTELIGENTE -->
+        <section id="servicios" aria-label="Producto Estrella 1: Sitios Web y Tarjeta Inteligente">
+            <div class="bg-[#061536] text-white rounded-[2rem] p-6 sm:p-10 border border-[#00D65B]/35 relative overflow-hidden shadow-2xl">
+                <!-- Capa ambiental limitada exclusivamente a la franja superior -->
+                <div class="pointer-events-none absolute top-0 left-0 right-0 h-44 overflow-hidden" aria-hidden="true">
+                    <img
+                        src="https://i.postimg.cc/fySmQYSR/Whats-App-Image-2026-08-06-at-8-05-41-PM-(2).jpg"
+                        alt=""
+                        class="absolute -top-6 -right-4 w-72 sm:w-96 h-auto object-cover opacity-[0.22] rotate-6 scale-110"
+                    >
+                    <img
+                        src="https://i.postimg.cc/5yGc6Wty/Whats-App-Image-2026-08-06-at-8-05-41-PM-(5).jpg"
+                        alt=""
+                        class="absolute -top-10 left-1/3 w-64 sm:w-80 h-auto object-cover opacity-[0.16] -rotate-6 scale-105 hidden sm:block"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#061536]/40 via-[#061536]/80 to-[#061536]"></div>
+                </div>
+
+                <!-- Encabezado Editorial -->
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-7 border-b border-white/15">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040D21] p-2.5 border border-[#00D65B]/50 shadow-lg shadow-[#00D65B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-full h-full" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="webStarGrad" x1="35" y1="20" x2="75" y2="100" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#0052FF"/>
+                                        <stop offset="55%" stop-color="#0095D9"/>
+                                        <stop offset="100%" stop-color="#00D65B"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="14" y="24" width="7" height="7" rx="1" fill="#0052FF"/>
+                                <rect x="26" y="22" width="8" height="8" rx="1" fill="#0052FF"/>
+                                <rect x="20" y="36" width="8" height="8" rx="1" fill="#0052FF"/>
+                                <rect x="14" y="48" width="7" height="7" rx="1" fill="#0052FF"/>
+                                <rect x="24" y="54" width="8" height="8" rx="1" fill="#0066FF"/>
+                                <path d="M84 37C77.5 30 68.5 26 58.5 26C39.5 26 25 41 25 60C25 79 39.5 94 58.5 94C68.5 94 77.5 90 84 83L73 72C69.2 76.2 64.2 78.5 58.5 78.5C48 78.5 40.5 70.5 40.5 60C40.5 49.5 48 41.5 58.5 41.5C64.2 41.5 69.2 43.8 73 48L84 37Z" fill="url(#webStarGrad)"/>
+                                <path d="M87 43H97V55H109V65H97V77H87V65H75V55H87V43Z" fill="#00D65B"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-[#00D65B]/20 border border-[#00D65B]/40 text-[#00D65B] text-[10px] font-extrabold uppercase tracking-wider mb-1.5">
+                                <span>★ Producto Estrella 01</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-white">
+                                Sitios Web Apps <span class="text-[#00D65B] font-bold">+ Tarjeta Inteligente</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <a
+                            href="https://wa.me/573125749480?text=%C2%A1Hola%20Conecta%2B!%20Quiero%20crear%20el%20Sitio%20Web%20App%20%2B%20Tarjeta%20Inteligente%20para%20mi%20negocio."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-product="Sitios Web Apps + Tarjeta NFC"
+                            class="px-5 py-2.5 rounded-xl bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] font-extrabold text-xs shadow-md shadow-[#00D65B]/20 transition"
+                        >
+                            Quiero el mío →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cuerpo Espaciado: Escaparate Visual + 6 Beneficios Ordenados -->
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pt-7">
+                    <!-- Columna Izquierda: Visor de Imágenes -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="w-full max-w-[360px] bg-[#040D21] rounded-[2rem] p-3 border border-white/15 shadow-2xl space-y-3">
+                            <div class="relative rounded-2xl overflow-hidden bg-[#06132E] border border-white/10">
+                                <img
+                                    id="webShowcaseImg"
+                                    src="https://i.postimg.cc/fySmQYSR/Whats-App-Image-2026-08-06-at-8-05-41-PM-(2).jpg"
+                                    alt="Ejemplo Sitio Web + Tarjeta Inteligente"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x520/040D21/00D65B?text=Conecta%2B+Web';"
+                                    class="w-full max-h-[460px] object-contain mx-auto block transition-all duration-300"
+                                >
+                            </div>
+
+                            <div class="px-1 text-center">
+                                <p id="webShowcaseTag" class="text-[10px] font-extrabold uppercase tracking-widest text-[#00D65B]">
+                                    Ejemplo 01 · Restaurantes y Comidas
+                                </p>
+                                <p id="webShowcaseCaption" class="text-xs font-semibold text-slate-200 mt-0.5">
+                                    Carta interactiva, carrito y pedidos directos a WhatsApp
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2.5 pt-1">
+                                <button
+                                    type="button"
+                                    data-web-src="https://i.postimg.cc/fySmQYSR/Whats-App-Image-2026-08-06-at-8-05-41-PM-(2).jpg"
+                                    data-web-tag="Ejemplo 01 · Restaurantes y Comidas"
+                                    data-web-caption="Carta interactiva, carrito y pedidos directos a WhatsApp"
+                                    class="web-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/10 border-2 border-[#00D65B] text-left transition cursor-pointer"
+                                >
+                                    <img
+                                        src="https://i.postimg.cc/fySmQYSR/Whats-App-Image-2026-08-06-at-8-05-41-PM-(2).jpg"
+                                        alt="Diseño 1 Web Conecta+"
+                                        class="w-9 h-9 rounded-lg object-cover shrink-0"
+                                    >
+                                    <div class="min-w-0">
+                                        <p class="text-[11px] font-bold text-white truncate">Menú App</p>
+                                        <p class="text-[10px] text-[#00D65B] truncate">Diseño 1</p>
+                                    </div>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    data-web-src="https://i.postimg.cc/5yGc6Wty/Whats-App-Image-2026-08-06-at-8-05-41-PM-(5).jpg"
+                                    data-web-tag="Ejemplo 02 · Empresas y Campo"
+                                    data-web-caption="Sitio web inteligente 24/7 + Tarjeta NFC y QR"
+                                    class="web-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border-2 border-transparent text-left transition cursor-pointer"
+                                >
+                                    <img
+                                        src="https://i.postimg.cc/5yGc6Wty/Whats-App-Image-2026-08-06-at-8-05-41-PM-(5).jpg"
+                                        alt="Diseño 2 Web Conecta+"
+                                        class="w-9 h-9 rounded-lg object-cover shrink-0"
+                                    >
+                                    <div class="min-w-0">
+                                        <p class="text-[11px] font-bold text-white truncate">Catálogo</p>
+                                        <p class="text-[10px] text-slate-300 truncate">Diseño 2</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Propuesta de Valor + 6 Cuadros Ordenados -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="space-y-2.5">
+                            <h4 class="text-xl sm:text-2xl font-black leading-snug text-white">
+                                Mucho más que una página: <span class="text-[#00D65B]">la sucursal digital completa de tu negocio</span>
+                            </h4>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                Creamos tu propio <strong class="text-white">Sitio Web App inteligente</strong> conectado con tu <strong class="text-[#00D65B]">Tarjeta Inteligente física (NFC + QR)</strong>. Tus clientes ven tu catálogo, arman su pedido, te ubican en el mapa y llegan directo a tu WhatsApp — <strong class="text-white">sin pagar comisiones por venta a plataformas externas</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Cuadrícula limpia de 6 beneficios (2 columnas x 3 filas) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#00D65B]">01 · Tu Negocio Abierto 24/7 (Tipo App)</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Tus clientes la instalan directo en la pantalla de su celular con tu logo, sin ocupar memoria ni depender de tiendas de apps.</p>
+                            </div>
+
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#38BDF8]">02 · Tarjeta Inteligente Física (NFC + QR)</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Acércala a cualquier teléfono o deja que escaneen el QR en tu mostrador o domicilio para abrir tu vitrina en un segundo.</p>
+                            </div>
+
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#00D65B]">03 · Carrito y Pedidos Listos a WhatsApp</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">El cliente elige productos, cantidades, domicilio o recogida y método de pago; tú recibes el pedido ordenado y sin intermediarios.</p>
+                            </div>
+
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#38BDF8]">04 · Todos tus Canales en un Solo Enlace</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Integra menú o catálogo, fotos reales, horarios, ubicación en Google Maps, redes sociales y botón para guardar tu contacto.</p>
+                            </div>
+
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#00D65B]">05 · Cero Comisiones por cada Venta</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">El 100% de cada pedido es para tu negocio y el cliente habla directo contigo, fidelizando tu propia base de compradores.</p>
+                            </div>
+
+                            <div class="bg-[#0B204D] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#38BDF8]">06 · Vitrina Activa en Conecta+</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Tu marca aparece en nuestro portal ciudadano junto a los negocios líderes de la región para atraer nuevos clientes cada día.</p>
+                            </div>
+                        </div>
+
+                        <!-- Franja de cierre persuasivo para el comerciante -->
+                        <div class="bg-[#040D21] border border-[#00D65B]/35 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div class="space-y-0.5">
+                                <p class="text-xs font-extrabold text-white">
+                                    Ideal para restaurantes, comidas rápidas, tiendas, fincas, servicios y emprendedores
+                                </p>
+                                <p class="text-[11px] text-slate-200">
+                                    Incluye diseño personalizado con tu marca, publicación en <strong class="text-[#00D65B]">soyconectaplus.com</strong> y acompañamiento continuo.
+                                </p>
+                            </div>
+                            <a
+                                href="https://wa.me/573125749480?text=%C2%A1Hola%20Conecta%2B!%20Quiero%20cotizar%20el%20Sitio%20Web%20App%20%2B%20Tarjeta%20Inteligente%20para%20mi%20negocio."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-track-product="Cotizar Sitios Web Apps"
+                                class="px-4 py-2.5 rounded-xl bg-white hover:bg-[#00D65B] text-[#040D21] font-extrabold text-xs whitespace-nowrap transition text-center"
+                            >
+                                Solicitar asesoría
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTO ESTRELLA 2: FIACONTROL -->
+        <section aria-label="Creación propia de Conecta+: FiaControl">
+            <div class="bg-[#0C1D42] text-white rounded-[2rem] p-6 sm:p-10 border border-amber-400/35 relative overflow-hidden shadow-2xl">
+                <!-- Capa ambiental limitada exclusivamente a la franja superior -->
+                <div class="pointer-events-none absolute top-0 left-0 right-0 h-44 overflow-hidden" aria-hidden="true">
+                    <img
+                        src="https://i.postimg.cc/MGx1hcYb/Whats-App-Image-2026-11-21-at-11-02-25-AM.jpg"
+                        alt=""
+                        class="absolute -top-6 -right-4 w-72 sm:w-96 h-auto object-cover opacity-[0.26] rotate-6 scale-110"
+                    >
+                    <img
+                        src="https://i.postimg.cc/rw24rd76/Whats-App-Image-2026-11-21-at-11-02-25-AM-(1).jpg"
+                        alt=""
+                        class="absolute -top-10 left-1/3 w-64 sm:w-80 h-auto object-cover opacity-[0.20] -rotate-6 scale-105 hidden sm:block"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-b from-amber-500/[0.12] via-[#0C1D42]/75 to-[#0C1D42]"></div>
+                </div>
+
+                <!-- Encabezado Editorial Amplio -->
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-7 border-b border-amber-300/20">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#132957] to-[#08142E] p-2 border border-amber-400/50 shadow-lg shadow-amber-400/10 flex items-center justify-center shrink-0">
+                            <img
+                                src="https://i.postimg.cc/wTLBWYx9/Logotipo-Fia-Control-en-blanco-y-amarillo.png"
+                                alt="Logo FiaControl"
+                                onerror="this.src='https://placehold.co/96x96/040D21/FACC15?text=FC'"
+                                class="w-full h-full object-contain"
+                            >
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-200 text-[10px] font-extrabold uppercase tracking-wider mb-1.5 shadow-xs">
+                                <span>★ Producto Estrella 02 · Creación Conecta+</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black tracking-tight text-white">
+                                FiaControl <span class="text-amber-300 font-bold">· Control de Créditos y Fiados</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <a
+                            href="https://fiacontrol.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-product="Demo FiaControl"
+                            class="px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-[#040D21] font-extrabold text-xs shadow-md shadow-amber-400/20 transition"
+                        >
+                            Probar Demo →
+                        </a>
+                        <a
+                            href="https://wa.me/573125749480?text=%C2%A1Hola%20Conecta%2B!%20Quiero%20activar%20FiaControl%20para%20controlar%20los%20cr%C3%A9ditos%20de%20mi%20negocio."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-track-product="Activar FiaControl"
+                            class="px-4 py-2.5 rounded-xl bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] font-extrabold text-xs shadow-md shadow-[#00D65B]/20 transition"
+                        >
+                            Activar en mi negocio
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cuerpo Espaciado: Visor de Imágenes + 4 Beneficios Ordenados -->
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start pt-7">
+                    <!-- Columna Izquierda: Visor de Imágenes FiaControl -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="w-full max-w-[360px] bg-[#081530] rounded-[2rem] p-3 border border-white/15 shadow-2xl space-y-3">
+                            <div class="relative rounded-2xl overflow-hidden bg-[#040D21] border border-white/10">
+                                <img
+                                    id="fiaShowcaseImg"
+                                    src="https://i.postimg.cc/MGx1hcYb/Whats-App-Image-2026-11-21-at-11-02-25-AM.jpg"
+                                    alt="Vista previa FiaControl"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x520/040D21/FACC15?text=FiaControl+App';"
+                                    class="w-full max-h-[460px] object-contain mx-auto block transition-all duration-300"
+                                >
+                            </div>
+
+                            <div class="px-1 text-center">
+                                <p id="fiaShowcaseTag" class="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">
+                                    Vista 01 · Gestión en Tiempo Real
+                                </p>
+                                <p id="fiaShowcaseCaption" class="text-xs font-semibold text-slate-200 mt-0.5">
+                                    Controla saldos, cupos y abonos desde tu celular
+                                </p>
+                            </div>
+
+                            <!-- Miniaturas 1 y 2 completas y ordenadas -->
+                            <div class="grid grid-cols-2 gap-2.5 pt-1">
+                                <button
+                                    type="button"
+                                    data-fia-src="https://i.postimg.cc/MGx1hcYb/Whats-App-Image-2026-11-21-at-11-02-25-AM.jpg"
+                                    data-fia-tag="Vista 01 · Gestión en Tiempo Real"
+                                    data-fia-caption="Controla saldos, cupos y abonos desde tu celular"
+                                    class="fia-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/10 border-2 border-amber-400 text-left transition cursor-pointer"
+                                >
+                                    <img
+                                        src="https://i.postimg.cc/MGx1hcYb/Whats-App-Image-2026-11-21-at-11-02-25-AM.jpg"
+                                        alt="Miniatura 1 FiaControl"
+                                        class="w-9 h-9 rounded-lg object-cover shrink-0"
+                                    >
+                                    <div class="min-w-0">
+                                        <p class="text-[11px] font-bold text-white truncate">Cartera</p>
+                                        <p class="text-[10px] text-amber-300 truncate">Pieza 1</p>
+                                    </div>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    data-fia-src="https://i.postimg.cc/rw24rd76/Whats-App-Image-2026-11-21-at-11-02-25-AM-(1).jpg"
+                                    data-fia-tag="Vista 02 · Cobros y Comprobantes"
+                                    data-fia-caption="Envía estados de cuenta y recibos por WhatsApp"
+                                    class="fia-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border-2 border-transparent text-left transition cursor-pointer"
+                                >
+                                    <img
+                                        src="https://i.postimg.cc/rw24rd76/Whats-App-Image-2026-11-21-at-11-02-25-AM-(1).jpg"
+                                        alt="Miniatura 2 FiaControl"
+                                        class="w-9 h-9 rounded-lg object-cover shrink-0"
+                                    >
+                                    <div class="min-w-0">
+                                        <p class="text-[11px] font-bold text-white truncate">Cobros</p>
+                                        <p class="text-[10px] text-slate-300 truncate">Pieza 2</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Narrativa Comercial + 4 Cuadros Ordenados -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="space-y-2.5">
+                            <h4 class="text-xl sm:text-2xl font-black leading-snug text-white">
+                                La herramienta más novedosa e indispensable para <span class="text-amber-300">llevar el control de créditos de cada negocio</span>
+                            </h4>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                Creada por <strong class="text-white">Conecta+</strong> para que todo comerciante deje atrás el cuaderno tachado, proteja su dinero en la calle y administre sus cuentas por cobrar con orden profesional desde el celular.
+                            </p>
+                        </div>
+
+                        <!-- Cuadrícula limpia de 4 beneficios (2 columnas x 2 filas) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div class="bg-[#122859] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-amber-300">01 · Saldos al Instante</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Visualiza cuánto te deben en total, quién está al día y qué clientes tienen cupo vencido.</p>
+                            </div>
+
+                            <div class="bg-[#122859] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#00D65B]">02 · Recibos por WhatsApp</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Envía estados de cuenta y comprobantes de abono en un toque sin discusiones.</p>
+                            </div>
+
+                            <div class="bg-[#122859] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-amber-300">03 · Modo Cajero con PIN</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Tus empleados registran ventas y abonos, pero solo tú autorizas cambios con tu PIN.</p>
+                            </div>
+
+                            <div class="bg-[#122859] border border-white/15 rounded-2xl p-4 space-y-1.5">
+                                <span class="block text-xs font-black text-[#00D65B]">04 · Funciona Sin Internet</span>
+                                <p class="text-xs text-slate-100 leading-relaxed">Sigue anotando aunque falle la señal; los datos se sincronizan solos al volver la red.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-1 flex flex-wrap items-center gap-3 text-xs text-slate-200">
+                            <span class="px-3.5 py-1.5 rounded-full bg-[#081530] border border-white/15 font-semibold text-white">
+                                Tiendas · Minimercados · Ferreterías · Comercios
+                            </span>
+                            <span>Cero cuadernos perdidos.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cierre de Conversión Final -->
+        <section class="bg-[#040D21] text-white rounded-3xl p-6 sm:p-7 border border-white/10 relative overflow-hidden flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+            <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-[#0052FF]/20 to-transparent"></div>
+            <div class="space-y-1.5 relative z-10">
+                <span class="text-[11px] font-bold uppercase tracking-widest text-[#00D65B]">Da el siguiente paso hacia la transformación digital</span>
+                <h2 class="text-lg sm:text-xl font-black text-white">
+                    Escríbenos ahora y lleva tu negocio al siguiente nivel
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300 max-w-lg">
+                    Sitios Web Apps + Tarjeta Inteligente o FiaControl · WhatsApp <strong class="text-white">312 574 9480</strong> · <span class="text-[#00D65B] font-semibold">@conectamas.digital</span>
+                </p>
+            </div>
+            <a
+                href="https://wa.me/573125749480?text=%C2%A1Hola%20Conecta%2B!%20Quiero%20asesor%C3%ADa%20para%20conectar%20mi%20negocio."
+                target="_blank"
+                rel="noopener noreferrer"
+                data-track-product="Contacto Final WhatsApp"
+                class="relative z-10 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[#0052FF] to-[#00D65B] hover:brightness-110 text-white font-extrabold text-xs sm:text-sm whitespace-nowrap shadow-lg transition"
+            >
+                Escríbenos al 312 574 9480 →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página Minimalista con Contador de Visitas -->
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5">
+                <p class="font-bold text-[#040D21]">Conecta<span class="text-[#00D65B]">+</span> · soyconectaplus.com · <span class="font-semibold text-slate-600">@conectamas.digital</span></p>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#040D21] text-white text-[11px] font-bold shadow-xs" title="Visitas al portal Conecta+">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#00D65B]"></span>
+                    <span>Visitas:</span>
+                    <strong id="visitCounterValue" class="text-[#00D65B] font-extrabold">...</strong>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button type="button" id="footerInstallBtn" class="font-bold text-[#0052FF] hover:underline cursor-pointer">
+                    Instalar App en tu celular
+                </button>
+                <span>Hecho para emprendedores que quieren crecer</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Instalación PWA en el Celular -->
+    <div
+        id="installAppModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="installModalTitle"
+        class="fixed inset-0 bg-[#040D21]/75 backdrop-blur-sm hidden items-center justify-center p-4 z-50"
+    >
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-5 relative">
+            <button
+                type="button"
+                id="closeInstallModalBtn"
+                aria-label="Cerrar ventana de instalación"
+                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center cursor-pointer"
+            >
+                ✕
+            </button>
+
+            <div class="space-y-1.5 pr-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00D65B]/15 text-[#040D21] text-[11px] font-extrabold uppercase tracking-wider">
+                    App Web · Sin ocupar memoria
+                </span>
+                <h3 id="installModalTitle" class="text-xl font-black text-[#040D21]">
+                    Instala <span class="text-[#0052FF]">Conecta+</span> en tu celular
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Guarda el acceso directo en tu pantalla de inicio para pedir domicilios en un toque, igual que una aplicación descargada.
+                </p>
+            </div>
+
+            <div id="nativeInstallBox" class="hidden">
+                <button
+                    type="button"
+                    id="triggerNativeInstallBtn"
+                    class="w-full py-3 px-4 rounded-2xl bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] font-extrabold text-sm shadow-md transition cursor-pointer"
+                >
+                    Instalar Conecta+ ahora →
+                </button>
+            </div>
+
+            <div class="space-y-3 text-xs">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-1.5">
+                    <p class="font-extrabold text-[#040D21]">📱 En Android (Google Chrome)</p>
+                    <ol class="list-decimal list-inside text-slate-600 space-y-1">
+                        <li>Toca el menú de <strong>tres puntos (⋮)</strong> arriba a la derecha.</li>
+                        <li>Selecciona <strong>"Agregar a la pantalla principal"</strong> o <strong>"Instalar aplicación"</strong>.</li>
+                        <li>Confirma tocando <strong>"Instalar"</strong>.</li>
+                    </ol>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-1.5">
+                    <p class="font-extrabold text-[#040D21]">🍎 En iPhone (Safari)</p>
+                    <ol class="list-decimal list-inside text-slate-600 space-y-1">
+                        <li>Toca el botón <strong>Compartir</strong> (cuadro con flecha hacia arriba) en la barra inferior.</li>
+                        <li>Desliza y elige <strong>"Agregar a inicio"</strong>.</li>
+                        <li>Toca <strong>"Agregar"</strong> arriba a la derecha.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación Toast para Copiar Enlace -->
+    <div
+        id="copyToast"
+        role="status"
+        aria-live="polite"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-[#040D21] text-[#00D65B] border border-white/15 px-4 py-2.5 rounded-full text-xs font-bold shadow-xl opacity-0 pointer-events-none transition-opacity duration-300 z-50"
+    >
+        Enlace de Conecta+ copiado
+    </div>
+
+    <script>
+        (function () {
+            function trackGA(eventName, params) {
+                if (typeof window.gtag === 'function') {
+                    window.gtag('event', eventName, params || {});
+                }
+            }
+
+            // Medición detallada por negocio y por producto en Google Analytics / Tag Manager
+            document.querySelectorAll('[data-track-biz]').forEach((el) => {
+                el.addEventListener('click', () => {
+                    const businessName = el.getAttribute('data-track-biz') || 'Desconocido';
+                    const actionType = el.getAttribute('data-track-action') || 'Clic';
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'clic_negocio_conectaplus',
+                        nombre_negocio: businessName,
+                        tipo_accion: actionType
+                    });
+                    trackGA('clic_negocio', {
+                        nombre_negocio: businessName,
+                        accion: actionType,
+                        event_category: 'Vitrina Ciudadana',
+                        event_label: businessName + ' - ' + actionType
+                    });
+                });
+            });
+
+            document.querySelectorAll('[data-track-product]').forEach((el) => {
+                el.addEventListener('click', () => {
+                    const productName = el.getAttribute('data-track-product') || '';
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'clic_producto_conectaplus',
+                        producto: productName
+                    });
+                    trackGA('clic_producto_estrella', {
+                        producto: productName,
+                        event_category: 'Comerciantes',
+                        event_label: productName
+                    });
+                });
+            });
+
+            const searchInput = document.getElementById('quickSearch');
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const pills = document.querySelectorAll('.cat-pill');
+            const items = document.querySelectorAll('.launcher-item');
+            const noResults = document.getElementById('noResults');
+            const appsCounter = document.getElementById('appsCounter');
+
+            let activeCategory = 'all';
+
+            const activePillClass = 'cat-pill px-4 py-2 rounded-full text-xs font-bold bg-[#040D21] text-[#00D65B] shadow-sm whitespace-nowrap transition cursor-pointer';
+            const inactivePillClass = 'cat-pill px-4 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 whitespace-nowrap transition cursor-pointer';
+
+            function filterLauncher() {
+                const query = (searchInput?.value || '').trim().toLowerCase();
+                let visibleCount = 0;
+
+                if (clearBtn) {
+                    clearBtn.classList.toggle('hidden', query.length === 0);
+                }
+
+                items.forEach((item) => {
+                    const cat = item.getAttribute('data-category') || '';
+                    const keywords = (item.getAttribute('data-keywords') || '').toLowerCase();
+
+                    const matchesCat = activeCategory === 'all' || cat === activeCategory;
+                    const matchesText = !query || keywords.includes(query);
+                    const isVisible = matchesCat && matchesText;
+
+                    item.classList.toggle('hidden', !isVisible);
+                    if (isVisible) visibleCount += 1;
+                });
+
+                if (noResults) {
+                    noResults.classList.toggle('hidden', visibleCount > 0);
+                }
+
+                if (appsCounter) {
+                    appsCounter.textContent = visibleCount === 1 ? '1 negocio conectado' : visibleCount + ' negocios conectados';
+                }
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterLauncher);
+            }
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    filterLauncher();
+                    searchInput.focus();
+                });
+            }
+
+            pills.forEach((pill) => {
+                pill.addEventListener('click', () => {
+                    activeCategory = pill.getAttribute('data-cat') || 'all';
+                    pills.forEach((p) => {
+                        p.className = p === pill ? activePillClass : inactivePillClass;
+                    });
+                    filterLauncher();
+                    trackGA('filtro_categoria', { categoria: activeCategory });
+                });
+            });
+
+            // Etiquetas rápidas en cabecera
+            document.querySelectorAll('.quick-tag').forEach((tagBtn) => {
+                tagBtn.addEventListener('click', () => {
+                    const term = tagBtn.getAttribute('data-quick') || '';
+                    if (searchInput) {
+                        searchInput.value = term;
+                        activeCategory = 'all';
+                        pills.forEach((p) => {
+                            p.className = p.getAttribute('data-cat') === 'all' ? activePillClass : inactivePillClass;
+                        });
+                        filterLauncher();
+                        trackGA('atajo_busqueda', { termino: term });
+                    }
+                });
+            });
+
+            // Galería interactiva para FiaControl
+            const fiaImg = document.getElementById('fiaShowcaseImg');
+            const fiaTag = document.getElementById('fiaShowcaseTag');
+            const fiaCaption = document.getElementById('fiaShowcaseCaption');
+            const fiaBtns = document.querySelectorAll('.fia-thumb-btn');
+
+            fiaBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const src = btn.getAttribute('data-fia-src');
+                    const tag = btn.getAttribute('data-fia-tag');
+                    const caption = btn.getAttribute('data-fia-caption');
+
+                    if (fiaImg && src) fiaImg.src = src;
+                    if (fiaTag && tag) fiaTag.textContent = tag;
+                    if (fiaCaption && caption) fiaCaption.textContent = caption;
+
+                    fiaBtns.forEach((b) => {
+                        const isActive = b === btn;
+                        b.className = isActive
+                            ? 'fia-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/10 border-2 border-amber-400 text-left transition cursor-pointer'
+                            : 'fia-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border-2 border-transparent text-left transition cursor-pointer';
+                    });
+                });
+            });
+
+            // Slider dinámico de ventajas (10 segundos por slide + pausa al pasar el cursor)
+            const slides = [
+                {
+                    badge: 'Para la Comunidad',
+                    badgeStyle: 'bg-[#00D65B]/15 border-[#00D65B]/35 text-[#00D65B]',
+                    title: 'Pide directo al negocio, sin sobreprecios ni intermediarios',
+                    desc: 'Explora las cartas digitales oficiales y envía tu pedido armado directo al WhatsApp de cada marca en segundos.',
+                    ctaText: 'Explorar negocios →',
+                    ctaHref: '#launcherGrid',
+                    ctaStyle: 'bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] shadow-[#00D65B]/20'
+                },
+                {
+                    badge: 'Para Comerciantes',
+                    badgeStyle: 'bg-[#38BDF8]/15 border-[#38BDF8]/35 text-[#38BDF8]',
+                    title: 'Tu propio Sitio Web App + Tarjeta Inteligente NFC y QR',
+                    desc: 'Vende 24/7 con tu catálogo instalable en el celular, recibe pedidos listos a WhatsApp y cero comisiones por venta.',
+                    ctaText: 'Conocer Sitios Web →',
+                    ctaHref: '#servicios',
+                    ctaStyle: 'bg-[#0052FF] hover:bg-[#1a66ff] text-white shadow-[#0052FF]/25'
+                },
+                {
+                    badge: 'Comercio Local Conectado',
+                    badgeStyle: 'bg-[#00D65B]/15 border-[#00D65B]/35 text-[#00D65B]',
+                    title: 'Apoya el comercio de tu ciudad desde un solo lugar',
+                    desc: 'Guarda soyconectaplus.com en tu celular y ten siempre a la mano tus comidas, postres y productos favoritos.',
+                    ctaText: 'Ver marcas aliadas →',
+                    ctaHref: '#launcherGrid',
+                    ctaStyle: 'bg-[#00D65B] hover:bg-[#00e863] text-[#040D21] shadow-[#00D65B]/20'
+                },
+                {
+                    badge: 'Para Negocios que Fían',
+                    badgeStyle: 'bg-amber-400/20 border-amber-400/40 text-amber-300',
+                    title: 'Olvídate del cuaderno tachado con FiaControl',
+                    desc: 'Lleva el control de créditos, saldos y abonos desde tu celular y envía recibos por WhatsApp con un toque.',
+                    ctaText: 'Ver FiaControl →',
+                    ctaHref: '#productos-estrella',
+                    ctaStyle: 'bg-amber-400 hover:bg-amber-300 text-[#040D21] shadow-amber-400/20'
+                }
+            ];
+
+            let currentSlide = 0;
+            const slideBadge = document.getElementById('slideBadge');
+            const slideStep = document.getElementById('slideStep');
+            const slideTitle = document.getElementById('slideTitle');
+            const slideDesc = document.getElementById('slideDesc');
+            const slideCta = document.getElementById('slideCta');
+            const slideDots = document.querySelectorAll('.slide-dot');
+            const prevSlideBtn = document.getElementById('prevSlideBtn');
+            const nextSlideBtn = document.getElementById('nextSlideBtn');
+
+            function renderSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+                const item = slides[currentSlide];
+
+                if (slideBadge) {
+                    slideBadge.textContent = item.badge;
+                    slideBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-extrabold uppercase tracking-wider ' + item.badgeStyle;
+                }
+                if (slideStep) slideStep.textContent = '0' + (currentSlide + 1) + ' / 0' + slides.length;
+                if (slideTitle) slideTitle.textContent = item.title;
+                if (slideDesc) slideDesc.textContent = item.desc;
+                if (slideCta) {
+                    slideCta.textContent = item.ctaText;
+                    slideCta.setAttribute('href', item.ctaHref);
+                    slideCta.className = 'px-3.5 sm:px-4 py-2.5 rounded-xl font-extrabold text-xs whitespace-nowrap shadow-md transition ' + item.ctaStyle;
+                }
+
+                slideDots.forEach((dot, idx) => {
+                    dot.className = idx === currentSlide
+                        ? 'slide-dot h-1.5 w-7 rounded-full bg-[#00D65B] transition-all cursor-pointer'
+                        : 'slide-dot h-1.5 w-2.5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer';
+                });
+            }
+
+            let slideTimer = setInterval(() => renderSlide(currentSlide + 1), 10000);
+
+            function resetSlideTimer() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(() => renderSlide(currentSlide + 1), 10000);
+            }
+
+            const promoSliderCard = document.getElementById('promoSliderCard');
+            promoSliderCard?.addEventListener('mouseenter', () => clearInterval(slideTimer));
+            promoSliderCard?.addEventListener('mouseleave', () => resetSlideTimer());
+            promoSliderCard?.addEventListener('touchstart', () => clearInterval(slideTimer), { passive: true });
+            promoSliderCard?.addEventListener('touchend', () => resetSlideTimer(), { passive: true });
+
+            prevSlideBtn?.addEventListener('click', () => {
+                renderSlide(currentSlide - 1);
+                resetSlideTimer();
+            });
+
+            nextSlideBtn?.addEventListener('click', () => {
+                renderSlide(currentSlide + 1);
+                resetSlideTimer();
+            });
+
+            slideDots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    const idx = Number(dot.getAttribute('data-slide') || 0);
+                    renderSlide(idx);
+                    resetSlideTimer();
+                });
+            });
+
+            // Galería interactiva para Sitios Web Apps + Tarjeta Inteligente
+            const webImg = document.getElementById('webShowcaseImg');
+            const webTag = document.getElementById('webShowcaseTag');
+            const webCaption = document.getElementById('webShowcaseCaption');
+            const webBtns = document.querySelectorAll('.web-thumb-btn');
+
+            webBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const src = btn.getAttribute('data-web-src');
+                    const tag = btn.getAttribute('data-web-tag');
+                    const caption = btn.getAttribute('data-web-caption');
+
+                    if (webImg && src) webImg.src = src;
+                    if (webTag && tag) webTag.textContent = tag;
+                    if (webCaption && caption) webCaption.textContent = caption;
+
+                    webBtns.forEach((b) => {
+                        const isActive = b === btn;
+                        b.className = isActive
+                            ? 'web-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/10 border-2 border-[#00D65B] text-left transition cursor-pointer'
+                            : 'web-thumb-btn flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border-2 border-transparent text-left transition cursor-pointer';
+                    });
+                });
+            });
+
+            // Modal de Instalación PWA + Compartir Portal
+            const installModal = document.getElementById('installAppModal');
+            const openInstallBtns = [document.getElementById('installAppBtn'), document.getElementById('footerInstallBtn')];
+            const closeInstallModalBtn = document.getElementById('closeInstallModalBtn');
+            const nativeInstallBox = document.getElementById('nativeInstallBox');
+            const triggerNativeInstallBtn = document.getElementById('triggerNativeInstallBtn');
+            let deferredInstallPrompt = null;
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredInstallPrompt = e;
+                nativeInstallBox?.classList.remove('hidden');
+            });
+
+            openInstallBtns.forEach((btn) => {
+                btn?.addEventListener('click', () => {
+                    trackGA('abrir_instalar_app');
+                    if (installModal) {
+                        installModal.classList.remove('hidden');
+                        installModal.classList.add('flex');
+                    }
+                });
+            });
+
+            closeInstallModalBtn?.addEventListener('click', () => {
+                installModal?.classList.add('hidden');
+                installModal?.classList.remove('flex');
+            });
+
+            installModal?.addEventListener('click', (e) => {
+                if (e.target === installModal) {
+                    installModal.classList.add('hidden');
+                    installModal.classList.remove('flex');
+                }
+            });
+
+            triggerNativeInstallBtn?.addEventListener('click', async () => {
+                if (!deferredInstallPrompt) return;
+                deferredInstallPrompt.prompt();
+                await deferredInstallPrompt.userChoice;
+                deferredInstallPrompt = null;
+                nativeInstallBox?.classList.add('hidden');
+            });
+
+            const sharePortalBtn = document.getElementById('sharePortalBtn');
+            const copyToast = document.getElementById('copyToast');
+
+            sharePortalBtn?.addEventListener('click', () => {
+                const url = 'https://soyconectaplus.com';
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Conecta+ | Conectamos tu negocio con el mundo',
+                        text: 'Descubre y pide directo a tus negocios favoritos en Conecta+.',
+                        url
+                    }).catch(() => {});
+                } else {
+                    const tempInput = document.createElement('input');
+                    tempInput.value = url;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+
+                    if (copyToast) {
+                        copyToast.classList.remove('opacity-0');
+                        setTimeout(() => copyToast.classList.add('opacity-0'), 2200);
+                    }
+                }
+            });
+
+            // Contador de visitas en tiempo real con respaldo local
+            const visitEl = document.getElementById('visitCounterValue');
+            if (visitEl) {
+                fetch('https://api.counterapi.dev/v1/soyconectaplus/portal-visitas/up')
+                    .then((res) => res.ok ? res.json() : Promise.reject())
+                    .then((data) => {
+                        const count = Number(data?.count || 0);
+                        if (count > 0) {
+                            localStorage.setItem('conectaplus_visits_cache', String(count));
+                            visitEl.textContent = count.toLocaleString('es-CO');
+                        }
+                    })
+                    .catch(() => {
+                        const cached = Number(localStorage.getItem('conectaplus_visits_cache') || 1) + 1;
+                        localStorage.setItem('conectaplus_visits_cache', String(cached));
+                        visitEl.textContent = cached.toLocaleString('es-CO');
+                    });
+            }
+
+            // Caché PWA offline para carga instantánea incluso con señal débil
+            if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+                const swCode = `
+                    const CACHE_NAME = 'conectaplus-v1';
+                    self.addEventListener('install', (e) => {
+                        self.skipWaiting();
+                    });
+                    self.addEventListener('activate', (e) => {
+                        e.waitUntil(clients.claim());
+                    });
+                    self.addEventListener('fetch', (e) => {
+                        if (e.request.method !== 'GET') return;
+                        e.respondWith(
+                            fetch(e.request)
+                                .then((res) => {
+                                    const copy = res.clone();
+                                    caches.open(CACHE_NAME).then((cache) => cache.put(e.request, copy));
+                                    return res;
+                                })
+                                .catch(() => caches.match(e.request))
+                        );
+                    });
+                `;
+                const swBlob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(swBlob);
+                navigator.serviceWorker.register(swUrl).catch(() => {});
+            }
+        })();
+    </script>
+</body>
+</html>
